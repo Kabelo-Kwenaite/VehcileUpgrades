@@ -1,0 +1,75 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Vehicle Page";
+}
+
+<h1>Upgrade Vehicle</h1>
+
+<Table>
+    <tr>
+        <td>
+            <!--Show Vehicle info-->
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Vehicle Name</th>
+                        <th>Vehicle Speed</th>
+                        <th>Vehicle Color</th>
+                        <th>Vehicle Engine</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        @foreach (var )
+                        {
+                            
+                        }
+                    }
+                </tbody>
+            </table>
+        </td>
+        <td>
+            <form method="post">
+                <table>
+                    <tr>
+                        <td>
+                            <p>Vehicle Speed:</p>
+                        </td>
+                        <td>
+                            <input type="text" required name="vSpeed" placeholder="200km/h" />
+                        </td>
+                        <td>
+                            <input type="button" name="btnUpgradeS" value="Upgrade" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Vehicle Color:</p>
+                        </td>
+                        <td>
+                            <input type="text" required name="vColor" placeholder="Light Red" />
+                        </td>
+                        <td>
+                            <input type="button" name="btnUpgradeC" value="Upgrade" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Vehicle Engine:</p>
+                        </td>
+                        <td>
+                            <input type="text" required name="Engine" placeholder="V8 twin Turbo" />
+                        </td>
+                        <td>
+                            <input type="button" name="btnUpgradeE" value="Upgrade" asp-action="btn_Upgrade" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </td>
+    </tr>
+</Table>
